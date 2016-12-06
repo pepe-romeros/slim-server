@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Class to handle all db operations
- * This class will have CRUD methods for the MarketMe database tables.
+ * Class to handle all database operations available.
+ * This class will have CRUD methods for the MarketMe app database tables.
  *
  * @author Josh Suchowitzki
  */
@@ -11,7 +11,7 @@ class DbHandler {
     private $conn; // Holds the database connection handler instance.
 
     function __construct() {
-        require_once dirname(__FILE__) . '/DbConnect.php';
+        require_once dirname(__FILE__) . '/DBConnect.php';
         // opening db connection
         $db = new DbConnect();
         $this->conn = $db->connect();
